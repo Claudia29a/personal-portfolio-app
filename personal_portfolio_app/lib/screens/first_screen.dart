@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/app_colors.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class FirstScreen extends StatelessWidget {
     final isDesktop = size.width >= 768;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF5DEB3), // customAmber
+      backgroundColor: AppColors.customAmber,
       body: Stack(
         children: [
           // Diagonal background triangle on right side
@@ -17,7 +18,7 @@ class FirstScreen extends StatelessWidget {
             child: ClipPath(
               clipper: DiagonalClipper(),
               child: Container(
-                color: const Color(0xFF632324), // customDarkRed
+                color: AppColors.customDarkBrown,
               ),
             ),
           ),
@@ -39,9 +40,10 @@ class FirstScreen extends StatelessWidget {
                   Text(
                     'Portfolio',
                     style: TextStyle(
+                      fontFamily: 'Abhaya Libre',
                       fontSize: isDesktop ? 96 : 48,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF3E2723), // customDarkBrown
+                      color: AppColors.customDarkBrown,
                       height: 1.2,
                     ),
                   ),
@@ -50,9 +52,10 @@ class FirstScreen extends StatelessWidget {
                   Text(
                     'Cretu Claudia',
                     style: TextStyle(
+                      fontFamily: 'Abhaya Libre',
                       fontSize: isDesktop ? 36 : 20,
                       fontWeight: FontWeight.w600,
-                      color: const Color(0xFF3E2723), // customDarkBrown
+                      color: AppColors.customDarkBrown,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -61,18 +64,20 @@ class FirstScreen extends StatelessWidget {
                       ? const Text(
                           'FRONT END DEVELOPMENT | MOBILE APPLICATION DEVELOPMENT | UX DESIGN',
                           style: TextStyle(
+                            fontFamily: 'Abhaya Libre',
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF3E2723), // customDarkBrown
+                            color: AppColors.customDarkBrown,
                             letterSpacing: 2.0,
                           ),
                         )
                       : const Text(
                           'FRONT END DEVELOPMENT\nMOBILE APPLICATION DEVELOPMENT\nUX DESIGN',
                           style: TextStyle(
+                            fontFamily: 'Abhaya Libre',
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF3E2723), // customDarkBrown
+                            color: AppColors.customDarkBrown,
                             letterSpacing: 2.0,
                             height: 1.5,
                           ),
@@ -92,15 +97,16 @@ class FirstScreen extends StatelessWidget {
                           Text(
                             'Browse my portfolio',
                             style: TextStyle(
+                              fontFamily: 'Abhaya Libre',
                               fontSize: isDesktop ? 36 : 20,
                               fontWeight: FontWeight.w500,
-                              color: const Color(0xFF5D4037), // customBrownDark
+                              color: AppColors.customBrownDark,
                             ),
                           ),
                           const SizedBox(width: 16),
                           const Icon(
                             Icons.arrow_forward_ios,
-                            color: Color(0xFFFF6F00), // customOrange
+                            color: AppColors.customOrange,
                             size: 40,
                           ),
                         ],
