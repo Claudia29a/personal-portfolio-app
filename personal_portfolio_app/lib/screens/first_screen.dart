@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/app_colors.dart';
+import 'introduction_screen.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -86,8 +87,12 @@ class FirstScreen extends StatelessWidget {
                   // Browse portfolio button
                   InkWell(
                     onTap: () {
-                      // Navigate to introduction page
-                      // Navigator.pushNamed(context, '/introduction');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const IntroductionScreen(),
+                        ),
+                      );
                     },
                     child: MouseRegion(
                       cursor: SystemMouseCursors.click,
